@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro VHS Snake</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="crt-container">
+        <div class="screen-overlay"></div>
+        <div class="scanlines"></div>
+        <div class="game-wrapper">
+            <canvas id="gameCanvas" width="600" height="400"></canvas>
+            
+            <div id="mainMenu" class="menu active">
+                <h1 class="glitch" data-text="SNAKE">SNAKE</h1>
+                <div class="menu-options">
+                    <div class="menu-item active" data-action="start">START GAME</div>
+                    <div class="menu-item" data-action="exit">EXIT</div>
+                </div>
+                <div class="footer-text">PRESS ENTER TO SELECT</div>
+            </div>
+
+            <div id="pauseMenu" class="menu">
+                <h2 class="glitch" data-text="PAUSED">PAUSED</h2>
+                <div class="menu-options">
+                    <div class="menu-item active" data-action="resume">RESUME</div>
+                    <div class="menu-item" data-action="quit">QUIT TO MENU</div>
+                </div>
+                <div class="footer-text">PRESS ENTER TO SELECT</div>
+            </div>
+
+            <div id="gameOverMenu" class="menu">
+                <h2 class="glitch" data-text="GAME OVER">GAME OVER</h2>
+                <p>SCORE: <span id="finalScore">0</span></p>
+                <div class="menu-options">
+                    <div class="menu-item active" data-action="retry">TRY AGAIN</div>
+                    <div class="menu-item" data-action="quit">EXIT</div>
+                </div>
+                <div class="footer-text">PRESS ENTER TO SELECT</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
